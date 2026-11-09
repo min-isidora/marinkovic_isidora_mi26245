@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tehnologija sinteze ljudskog glasa – Vocaloid i Hatsune Miku</title>
+<style>
+:root{--fg:#1a1a1a;--muted:#555;--accent:#1f4e79;--bg:#fafaf8}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:Georgia,"Times New Roman",serif;line-height:1.7;font-size:18px}
+.page{max-width:760px;margin:0 auto;padding:48px 24px 80px}
+.cover{text-align:center;padding:48px 0 40px;border-bottom:2px solid var(--accent);margin-bottom:40px}
+.cover .uni{font-variant:small-caps;letter-spacing:.08em;color:var(--muted);margin:0}
+.cover h1{font-size:2.1rem;margin:2.2rem 0 .4rem;color:var(--accent);line-height:1.2}
+.cover .sub{font-size:1.2rem;font-style:italic;color:var(--muted);margin:0 0 2.2rem}
+.cover dl{display:inline-block;text-align:left;margin:0}
+.cover dt{float:left;clear:left;font-weight:bold;margin-right:.5em}
+.cover dd{margin:0 0 .3em}
+.cover .city{margin-top:2rem;color:var(--muted)}
+nav#TOC{background:#fff;border:1px solid #ddd;border-radius:6px;padding:16px 28px;margin-bottom:40px}
+nav#TOC::before{content:"Sadržaj";font-weight:bold;color:var(--accent);display:block;margin-bottom:.4em}
+nav#TOC ul{list-style:none;padding-left:0;margin:0}
+nav#TOC a{color:var(--fg);text-decoration:none}
+nav#TOC a:hover{color:var(--accent);text-decoration:underline}
+section h1,h2{color:var(--accent);font-size:1.5rem;font-weight:bold;margin-top:2.2em;border-bottom:1px solid #ddd;padding-bottom:.2em}
+p{text-align:justify;hyphens:auto;margin:0 0 1em}
+ol,ul{padding-left:1.5em}
+li{margin-bottom:.4em}
+a{color:#0b5cad}
+sup.cite,a.cite{font-size:.85em}
+section#literatura ol li{word-break:break-word;font-size:.95em}
+@media print{body{background:#fff;font-size:12pt}.page{max-width:none;padding:0}.cover{page-break-after:always}}
+.header-section-number{margin-right:.4em}
+
+</style>
+</head>
+<body>
+<div class="page">
+<header class="cover">
+<p class="uni">Univerzitet u Beogradu</p>
+<p class="uni">Matematički fakultet</p>
+<h1>TEHNOLOGIJA SINTEZE LJUDSKOG GLASA</h1>
+<p class="sub">Vocaloid sistem na primeru Hatsune Miku</p>
+<dl>
+<dt>Predmet:</dt><dd>Uvod u informatiku</dd>
+<dt>Student:</dt><dd>Isidora Marinković</dd>
+<dt>Broj indeksa:</dt><dd>MI26245</dd>
+</dl>
+<p class="city">Beograd, 2026.</p>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#uvod" id="toc-uvod"><span
+class="toc-section-number">1</span> Uvod</a></li>
+<li><a href="#šta-je-vocaloid" id="toc-šta-je-vocaloid"><span
+class="toc-section-number">2</span> Šta je VOCALOID?</a></li>
+<li><a href="#kako-funkcioniše-sinteza-pevačkog-glasa"
+id="toc-kako-funkcioniše-sinteza-pevačkog-glasa"><span
+class="toc-section-number">3</span> Kako funkcioniše sinteza pevačkog
+glasa?</a></li>
+<li><a href="#nastanak-i-razvoj-tehnologije"
+id="toc-nastanak-i-razvoj-tehnologije"><span
+class="toc-section-number">4</span> Nastanak i razvoj
+tehnologije</a></li>
+<li><a href="#hatsune-miku-kao-primer-virtuelnog-izvođača"
+id="toc-hatsune-miku-kao-primer-virtuelnog-izvođača"><span
+class="toc-section-number">5</span> Hatsune Miku kao primer virtuelnog
+izvođača</a></li>
+<li><a href="#prednosti-i-ograničenja"
+id="toc-prednosti-i-ograničenja"><span
+class="toc-section-number">6</span> Prednosti i ograničenja</a></li>
+<li><a href="#savremeni-razvoj" id="toc-savremeni-razvoj"><span
+class="toc-section-number">7</span> Savremeni razvoj</a></li>
+<li><a href="#zaključak" id="toc-zaključak"><span
+class="toc-section-number">8</span> Zaključak</a></li>
+</ul>
+</nav>
+<section id="uvod" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span>
+Uvod</h1>
+<p>Razvoj digitalnih tehnologija značajno je promenio način na koji se
+muzika komponuje, snima i distribuira. Jedan od zanimljivih primera
+povezivanja informatike i muzike jeste sinteza ljudskog glasa. Ova
+tehnologija omogućava da računar, na osnovu zadate melodije i teksta,
+generiše vokalni zapis. Među najpoznatijim sistemima ove vrste nalazi se
+VOCALOID, koji je razvila kompanija Yamaha.</p>
+<p>Cilj ovog rada je da objasni osnovni princip rada sistema za sintezu
+pevanja, predstavi razvoj VOCALOID tehnologije i prikaže ulogu Hatsune
+Miku kao jednog od najpoznatijih primera virtuelnog izvođača.</p>
+</section>
+<section id="šta-je-vocaloid" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Šta je
+VOCALOID?</h1>
+<p>VOCALOID je softver za sintetičko generisanje pevačkog glasa.
+Korisnik unosi tekst pesme i melodiju, a program na osnovu tih podataka
+stvara vokalnu deonicu. Melodija se najčešće unosi pomoću muzičkih nota
+u vremenskoj mreži, dok se tekst raspoređuje uz odgovarajuće note. Zatim
+se podešavaju osobine izvođenja, kao što su visina tona, trajanje,
+dinamika i vibrato [<a class="cite" href="#ref1">1</a>].</p>
+<p>Važan deo sistema predstavljaju glasovne banke (eng.
+<em>voicebanks</em>). One sadrže snimljene glasovne uzorke i podatke
+koji omogućavaju softveru da formira glas na osnovu unetih muzičkih i
+jezičkih informacija. Različite glasovne banke daju različite boje,
+karakteristike i mogućnosti pevanja.</p>
+</section>
+<section id="kako-funkcioniše-sinteza-pevačkog-glasa" class="level1"
+data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Kako
+funkcioniše sinteza pevačkog glasa?</h1>
+<p>Proces rada može se pojednostavljeno predstaviti kroz nekoliko
+koraka:</p>
+<ol>
+<li><p><strong>Unos melodije:</strong> korisnik unosi note, njihovu
+visinu i trajanje.</p></li>
+<li><p><strong>Unos teksta:</strong> slogovi ili fonetski elementi
+raspoređuju se uz note.</p></li>
+<li><p><strong>Izbor glasovne banke:</strong> bira se glas koji će
+izvoditi zadatu deonicu.</p></li>
+<li><p><strong>Podešavanje izvođenja:</strong> menjaju se parametri kao
+što su dinamika, vibrato, izgovor i prelazi između tonova.</p></li>
+<li><p><strong>Generisanje zvuka:</strong> softver obrađuje podatke i
+stvara digitalni vokalni zapis.</p></li>
+</ol>
+<p>Rezultat nije unapred snimljena pesma, već zvuk koji se formira prema
+instrukcijama korisnika. Zbog toga autor može da menja melodiju, tekst i
+način izvođenja bez ponovnog snimanja ljudskog pevača [<a class="cite" href="#ref1">1</a>, <a class="cite" href="#ref5">5</a>].</p>
+</section>
+<section id="nastanak-i-razvoj-tehnologije" class="level1"
+data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span>
+Nastanak i razvoj tehnologije</h1>
+<p>Yamaha je razvijala VOCALOID tehnologiju početkom dvehiljaditih, a
+prvi proizvodi predstavljeni su javnosti 2004. godine. Tokom narednih
+godina sistem je unapređivan kroz nove verzije, kvalitetnije glasovne
+banke i naprednije mogućnosti uređivanja [<a class="cite" href="#ref2">2</a>].</p>
+<p>Godine 2007. kompanija Crypton Future Media objavila je Hatsune Miku,
+glasovnu banku zasnovanu na tadašnjoj verziji VOCALOID2. Datum izlaska
+bio je 31. avgust 2007. godine. Miku je postala posebno značajna jer su
+korisnici mogli da stvaraju pesme, objavljuju ih na internetu i dele ih
+sa drugim autorima [<a class="cite" href="#ref2">2</a>, <a class="cite" href="#ref3">3</a>].</p>
+</section>
+<section id="hatsune-miku-kao-primer-virtuelnog-izvođača" class="level1"
+data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Hatsune
+Miku kao primer virtuelnog izvođača</h1>
+<p>Hatsune Miku nije ljudska pevačica, već softverska glasovna banka
+predstavljena kroz virtuelni lik. Njen glas nastaje pomoću sinteze, dok
+vizuelni identitet omogućava da publika prepozna lik i poveže ga sa
+muzikom. Crypton Future Media opisuje Miku kao virtuelnu pevačicu čiji
+razvoj prati velika zajednica autora i obožavalaca [<a class="cite" href="#ref3">3</a>].</p>
+<p>Posebnost ovog fenomena jeste učešće zajednice. Autori komponuju
+pesme, prave animacije, ilustracije i remikse, a zatim svoje radove dele
+na digitalnim platformama. Na taj način Hatsune Miku prevazilazi ulogu
+običnog muzičkog programa i postaje zajednička kreativna platforma
+[<a class="cite" href="#ref3">3</a>, <a class="cite" href="#ref4">4</a>].</p>
+</section>
+<section id="prednosti-i-ograničenja" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span>
+Prednosti i ograničenja</h1>
+<p>Među prednostima VOCALOID sistema izdvajaju se mogućnost stvaranja
+vokala bez organizovanja snimanja sa pevačem, jednostavnije menjanje
+melodije i teksta, kontrola nad parametrima izvođenja i podsticanje
+eksperimentisanja.</p>
+<p>Ipak, postoje i ograničenja. Prirodnost rezultata zavisi od kvaliteta
+glasovne banke i podešavanja, potrebno je vreme za učenje programa, a
+sintetički glas ne mora uvek da prenese sve nijanse ljudskog izvođenja.
+Upotreba glasovnih podataka i virtuelnih likova zahteva i poštovanje
+licenci i autorskih prava.</p>
+</section>
+<section id="savremeni-razvoj" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span>
+Savremeni razvoj</h1>
+<p>Sistemi za sintezu glasa nastavljaju da se razvijaju. Savremeniji
+pristupi koriste i metode veštačke inteligencije kako bi se poboljšali
+prirodnost, izražajnost i način povezivanja tonova. Yamaha opisuje
+VOCALOID:AI kao tehnologiju koja analizira muzički kontekst i generiše
+izražajnije vokalne deonice [<a class="cite" href="#ref5">5</a>]. To pokazuje kako se oblast
+računarske obrade zvuka povezuje sa metodama mašinskog učenja.</p>
+</section>
+<section id="zaključak" class="level1" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span>
+Zaključak</h1>
+<p>VOCALOID predstavlja primer uspešne primene informatike u muzičkoj
+produkciji. Kombinovanjem digitalne obrade zvuka, glasovnih podataka i
+korisničkog unosa omogućava stvaranje pevačkih deonica na računaru.
+Hatsune Miku je pokazala da ovakva tehnologija može imati uticaj ne samo
+na način stvaranja muzike već i na razvoj digitalne kulture i kreativnih
+zajednica. Zbog toga je VOCALOID zanimljiv primer saradnje tehnologije,
+umetnosti i korisnika.</p>
+</section>
+<section id="literatura">
+<h1>Literatura</h1>
+<ol>
+<li id="ref1">Yamaha Corporation, <em>What is VOCALOID?</em>, dostupno na: <a href="https://www.yamaha.com/en/news_release/2026/26022502/">https://www.yamaha.com/en/news_release/2026/26022502/</a>.</li>
+<li id="ref2">VOCALOID Official Website, <em>VOCALOID History</em>, dostupno na: <a href="https://www.vocaloid.com/en/anniversary/history/">https://www.vocaloid.com/en/anniversary/history/</a>.</li>
+<li id="ref3">Crypton Future Media, <em>About Hatsune Miku</em>, dostupno na: <a href="https://ec.crypton.co.jp/pages/prod/virtualsinger/cv01_us">https://ec.crypton.co.jp/pages/prod/virtualsinger/cv01_us</a>.</li>
+<li id="ref4">Piapro.net, <em>Official Hatsune Miku and Piapro Characters Website</em>, dostupno na: <a href="https://piapro.net/intl/en.html">https://piapro.net/intl/en.html</a>.</li>
+<li id="ref5">Yamaha Corporation, <em>AI Sound Synthesis Technology</em>, dostupno na: <a href="https://www.yamaha.com/en/tech-design/research/technologies/aisynth/">https://www.yamaha.com/en/tech-design/research/technologies/aisynth/</a>.</li>
+</ol>
+</section>
+</div>
+</body>
+</html>
