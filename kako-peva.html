@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kako računarski program Hatsune Miku peva zadate note i tekst.">
+    <title>Kako program peva – Hatsune Miku</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav id="navigacija">
+        <ul>
+            <li><a href="index.html" class="aktivna">POČETNA</a></li>
+            <li><a href="kako-peva.html">KAKO PROGRAM PEVA</a></li>
+            <li><a href="zvezda.html">PUT DO ZVEZDE</a></li>
+            <li><a href="kraj.html">KLIKNI ME</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>KAKO PROGRAM PEVA NOTE I TEKST?</h1>
+        <p><em>Od zapisa u računaru do zvuka iz zvučnika</em></p>
+    </header>
+
+    <main id="sadrzaj">
+
+        <h2 id="ulaz">1. ŠTA KORISNIK UNOSI?</h2>
+        <p>
+            Hatsune Miku se koristi kao muzički program. Autor pesme unosi dve stvari:
+        </p>
+        <ul class="lista">
+            <li><strong>note</strong> – koliko je ton visok (visina) i koliko traje,</li>
+            <li><strong>tekst</strong> – koji slog se peva na kojoj noti.</li>
+        </ul>
+        <p>
+            To se radi u editoru koji liči na klavirski prikaz: svaka nota je jedna horizontalna
+            traka, a unutar nje se upisuje slog teksta.
+        </p>
+
+        <figure>
+            <img src="slike/klavirski-prikaz.svg" alt="Klavirski prikaz sa pet traka različite visine i dužine, svaka nosi po jedan slog: ha, tsu, ne, mi, ku">
+            <figcaption>Slika 1: Note kao trake. Visina trake je visina tona, dužina je trajanje, a u traci je slog.</figcaption>
+        </figure>
+
+        <h2 id="koraci">2. ŠTA RAČUNAR RADI KORAK PO KORAK?</h2>
+        <ol class="kp_ol">
+            <li><strong>Tekst se pretvara u foneme.</strong> Program razlaže reči na najmanje glasovne jedinice (na primer „mi“ postaje glasovi <em>m</em> i <em>i</em>).</li>
+            <li><strong>Traži se baza glasa.</strong> U njoj su unapred snimljeni glasovi prave pevačice: kratki delovi izgovorenih glasova i njihovih prelaza.</li>
+            <li><strong>Delovi se biraju i spajaju.</strong> Program lepi isečke glasova jedan za drugim da bi dobio traženi slog.</li>
+            <li><strong>Visina se prilagođava noti.</strong> Isečak se menja tako da zvuči upravo na toj frekvenciji (npr. 440 Hz za noti A).</li>
+            <li><strong>Trajanje se rasteže ili skraćuje.</strong> Samoglasnik se produžava onoliko koliko nota traje.</li>
+            <li><strong>Dodaju se detalji pevanja.</strong> Vibrato, jačina, svetlina boje glasa i glatki prelazi između nota.</li>
+            <li><strong>Rezultat je zvučni zapis</strong> koji se pušta, snima ili uključuje u pesmu.</li>
+        </ol>
+
+        <figure>
+            <img src="slike/tok-sinteze.svg" alt="Dijagram toka od pet kutija: tekst i note, fonemi, baza glasa, podešavanje visine i trajanja, gotov zvuk">
+            <figcaption>Slika 2: Put od unetog teksta i nota do gotovog zvuka.</figcaption>
+        </figure>
+
+        <div class="kartica">
+            <h3>ZAŠTO ZVUČI KAO PEVAČICA, A NE KAO ROBOT?</h3>
+            <p>
+                Zato što se ne generiše „veštački“ glas ispočetka. Osnova su <strong>stvarni snimci
+                ljudskog glasa</strong>. Računar ih samo preuređuje: menja visinu, trajanje i način
+                spajanja, a boja glasa ostaje ljudska.
+            </p>
+        </div>
+
+        <h2 id="visina">3. KAKO SE NOTA PRETVARA U FREKVENCIJU?</h2>
+        <p>
+            Svaka nota ima svoju <em>frekvenciju</em>, odnosno broj treptaja zvučnog talasa u sekundi
+            (meri se u hercima, Hz). Kada se nota pomeri za oktavu naviše, frekvencija se udvostruči.
+            Računar broji note kao brojeve (MIDI broj), a frekvencija se računa formulom:
+        </p>
+
+        <span class="formula">f = 440 × 2<sup>(n − 69) / 12</sup></span>
+
+        <p>
+            Ovde je <strong>n</strong> broj note (nota A četvrte oktave ima broj 69), a <strong>f</strong>
+            frekvencija u hercima.
+        </p>
+
+        <table class="tabela">
+            <caption>Tabela 1: Nekoliko nota i njihove frekvencije</caption>
+            <tr>
+                <th>Nota</th>
+                <th>MIDI broj</th>
+                <th>Frekvencija (Hz)</th>
+            </tr>
+            <tr>
+                <td>C4 (do)</td>
+                <td>60</td>
+                <td>261,63</td>
+            </tr>
+            <tr>
+                <td>E4 (mi)</td>
+                <td>64</td>
+                <td>329,63</td>
+            </tr>
+            <tr>
+                <td>G4 (sol)</td>
+                <td>67</td>
+                <td>392,00</td>
+            </tr>
+            <tr>
+                <td>A4 (la)</td>
+                <td>69</td>
+                <td>440,00</td>
+            </tr>
+            <tr>
+                <td>C5 (do, oktavu više)</td>
+                <td>72</td>
+                <td>523,25</td>
+            </tr>
+        </table>
+
+        <h2 id="parametri">4. ŠTA SVE AUTOR MOŽE DA PODESI?</h2>
+        <p>
+            Isti tekst i iste note mogu zvučati potpuno drugačije u zavisnosti od podešavanja.
+            Zato dve pesme sa istim glasom ne zvuče isto.
+        </p>
+
+        <table class="tabela">
+            <caption>Tabela 2: Parametri pevanja</caption>
+            <tr>
+                <th>Parametar</th>
+                <th>Šta menja</th>
+            </tr>
+            <tr>
+                <td>Jačina (dinamika)</td>
+                <td>Da li se peva tiho i nežno ili glasno i snažno</td>
+            </tr>
+            <tr>
+                <td>Vibrato</td>
+                <td>Lagano treperenje tona, kao kod pravih pevača</td>
+            </tr>
+            <tr>
+                <td>Svetlina</td>
+                <td>Da li glas zvuči „oštrije“ ili „mekše“</td>
+            </tr>
+            <tr>
+                <td>Prelazi visine</td>
+                <td>Koliko glatko glas klizi od jedne note do druge</td>
+            </tr>
+            <tr>
+                <td>Izgovor</td>
+                <td>Kako se izgovara pojedini slog (jasno, uz dah, promukli glas…)</td>
+            </tr>
+        </table>
+
+        <h2>SLEDEĆE PITANJE</h2>
+        <p>
+            Kada je sve ovo jasno, ostaje pitanje zašto je upravo ovaj glas postao poznat.
+            Odgovor je na sledećoj strani.
+        </p>
+        <p>
+            <a class="dugme" href="zvezda.html">KAKO JE POSTALA ZVEZDA →</a>
+            <a class="dugme" href="index.html">← NAZAD NA POČETNU</a>
+        </p>
+
+    </main>
+
+    <footer>
+        <p>Školski projekat – HTML i CSS</p>
+    </footer>
+
+</body>
+</html>
