@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 200" width="900" height="200" role="img">
+  <title>Tok sinteze pevanja</title>
+  <defs>
+    <marker id="strelica" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#ff7eb6"/>
+    </marker>
+  </defs>
+  <rect width="900" height="200" fill="#061218"/>
+  <g font-family="Verdana, sans-serif" font-size="14" font-weight="bold" fill="#061218" text-anchor="middle">
+    <rect x="10"  y="60" width="140" height="80" rx="10" fill="#39c5bb"/>
+    <text x="80"  y="95">Tekst</text>
+    <text x="80"  y="115">i note</text>
+
+    <rect x="190" y="60" width="140" height="80" rx="10" fill="#39c5bb"/>
+    <text x="260" y="105">Fonemi</text>
+
+    <rect x="370" y="60" width="140" height="80" rx="10" fill="#39c5bb"/>
+    <text x="440" y="95">Baza</text>
+    <text x="440" y="115">glasa</text>
+
+    <rect x="550" y="60" width="150" height="80" rx="10" fill="#39c5bb"/>
+    <text x="625" y="90">Visina i</text>
+    <text x="625" y="110">trajanje</text>
+    <text x="625" y="128">(podešavanje)</text>
+
+    <rect x="740" y="60" width="150" height="80" rx="10" fill="#ff7eb6"/>
+    <text x="815" y="105">Gotov zvuk</text>
+  </g>
+  <g stroke="#ff7eb6" stroke-width="3" marker-end="url(#strelica)">
+    <line x1="152" y1="100" x2="186" y2="100"/>
+    <line x1="332" y1="100" x2="366" y2="100"/>
+    <line x1="512" y1="100" x2="546" y2="100"/>
+    <line x1="702" y1="100" x2="736" y2="100"/>
+  </g>
+</svg>
