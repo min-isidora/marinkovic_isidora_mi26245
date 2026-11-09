@@ -1,0 +1,101 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[serbian]{babel}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+\onehalfspacing
+\hypersetup{colorlinks=true,linkcolor=black,urlcolor=blue}
+\setlength{\parindent}{1.25cm}
+\setlength{\parskip}{4pt}
+
+\begin{document}
+
+\begin{titlepage}
+\centering
+{\large UNIVERZITET U BEOGRADU}\\[0.3cm]
+{\large MATEMATIČKI FAKULTET}\\[3.0cm]
+{\LARGE\bfseries TEHNOLOGIJA SINTEZE LJUDSKOG GLASA}\\[0.4cm]
+{\Large Vocaloid sistem na primeru Hatsune Miku}\\[3.0cm]
+\begin{flushleft}
+\textbf{Predmet:} Uvod u informatiku{\hspace{8cm}}\\[0.5cm]
+\textbf{Student:} Isidora Marinković\\[0.5cm]
+\textbf{Broj indeksa:} MI26245
+\end{flushleft}
+\vfill
+{\large Beograd, 2026.}
+\end{titlepage}
+
+\tableofcontents
+\newpage
+
+\section{Uvod}
+Razvoj digitalnih tehnologija značajno je promenio način na koji se muzika komponuje, snima i distribuira. Jedan od zanimljivih primera povezivanja informatike i muzike jeste sinteza ljudskog glasa. Ova tehnologija omogućava da računar, na osnovu zadate melodije i teksta, generiše vokalni zapis. Među najpoznatijim sistemima ove vrste nalazi se VOCALOID, koji je razvila kompanija Yamaha.
+
+Cilj ovog rada je da objasni osnovni princip rada sistema za sintezu pevanja, predstavi razvoj VOCALOID tehnologije i prikaže ulogu Hatsune Miku kao jednog od najpoznatijih primera virtuelnog izvođača.
+
+\section{Šta je VOCALOID?}
+VOCALOID je softver za sintetičko generisanje pevačkog glasa. Korisnik unosi tekst pesme i melodiju, a program na osnovu tih podataka stvara vokalnu deonicu. Melodija se najčešće unosi pomoću muzičkih nota u vremenskoj mreži, dok se tekst raspoređuje uz odgovarajuće note. Zatim se podešavaju osobine izvođenja, kao što su visina tona, trajanje, dinamika i vibrato \cite{yamahaVOCALOID}.
+
+Važan deo sistema predstavljaju glasovne banke (eng. \textit{voicebanks}). One sadrže snimljene glasovne uzorke i podatke koji omogućavaju softveru da formira glas na osnovu unetih muzičkih i jezičkih informacija. Različite glasovne banke daju različite boje, karakteristike i mogućnosti pevanja.
+
+\section{Kako funkcioniše sinteza pevačkog glasa?}
+Proces rada može se pojednostavljeno predstaviti kroz nekoliko koraka:
+\begin{enumerate}[label=\arabic*.]
+  \item \textbf{Unos melodije:} korisnik unosi note, njihovu visinu i trajanje.
+  \item \textbf{Unos teksta:} slogovi ili fonetski elementi raspoređuju se uz note.
+  \item \textbf{Izbor glasovne banke:} bira se glas koji će izvoditi zadatu deonicu.
+  \item \textbf{Podešavanje izvođenja:} menjaju se parametri kao što su dinamika, vibrato, izgovor i prelazi između tonova.
+  \item \textbf{Generisanje zvuka:} softver obrađuje podatke i stvara digitalni vokalni zapis.
+\end{enumerate}
+
+Rezultat nije unapred snimljena pesma, već zvuk koji se formira prema instrukcijama korisnika. Zbog toga autor može da menja melodiju, tekst i način izvođenja bez ponovnog snimanja ljudskog pevača \cite{yamahaVOCALOID,yamahaAI}.
+
+\section{Nastanak i razvoj tehnologije}
+Yamaha je razvijala VOCALOID tehnologiju početkom dvehiljaditih, a prvi proizvodi predstavljeni su javnosti 2004. godine. Tokom narednih godina sistem je unapređivan kroz nove verzije, kvalitetnije glasovne banke i naprednije mogućnosti uređivanja \cite{vocaloidHistory}.
+
+Godine 2007. kompanija Crypton Future Media objavila je Hatsune Miku, glasovnu banku zasnovanu na tadašnjoj verziji VOCALOID2. Datum izlaska bio je 31. avgust 2007. godine. Miku je postala posebno značajna jer su korisnici mogli da stvaraju pesme, objavljuju ih na internetu i dele ih sa drugim autorima \cite{vocaloidHistory,cryptonMiku}.
+
+\section{Hatsune Miku kao primer virtuelnog izvođača}
+Hatsune Miku nije ljudska pevačica, već softverska glasovna banka predstavljena kroz virtuelni lik. Njen glas nastaje pomoću sinteze, dok vizuelni identitet omogućava da publika prepozna lik i poveže ga sa muzikom. Crypton Future Media opisuje Miku kao virtuelnu pevačicu čiji razvoj prati velika zajednica autora i obožavalaca \cite{cryptonMiku}.
+
+Posebnost ovog fenomena jeste učešće zajednice. Autori komponuju pesme, prave animacije, ilustracije i remikse, a zatim svoje radove dele na digitalnim platformama. Na taj način Hatsune Miku prevazilazi ulogu običnog muzičkog programa i postaje zajednička kreativna platforma \cite{cryptonMiku,piapro}.
+
+\section{Prednosti i ograničenja}
+Među prednostima VOCALOID sistema izdvajaju se mogućnost stvaranja vokala bez organizovanja snimanja sa pevačem, jednostavnije menjanje melodije i teksta, kontrola nad parametrima izvođenja i podsticanje eksperimentisanja.
+
+Ipak, postoje i ograničenja. Prirodnost rezultata zavisi od kvaliteta glasovne banke i podešavanja, potrebno je vreme za učenje programa, a sintetički glas ne mora uvek da prenese sve nijanse ljudskog izvođenja. Upotreba glasovnih podataka i virtuelnih likova zahteva i poštovanje licenci i autorskih prava.
+
+\section{Savremeni razvoj}
+Sistemi za sintezu glasa nastavljaju da se razvijaju. Savremeniji pristupi koriste i metode veštačke inteligencije kako bi se poboljšali prirodnost, izražajnost i način povezivanja tonova. Yamaha opisuje VOCALOID:AI kao tehnologiju koja analizira muzički kontekst i generiše izražajnije vokalne deonice \cite{yamahaAI}. To pokazuje kako se oblast računarske obrade zvuka povezuje sa metodama mašinskog učenja.
+
+\section{Zaključak}
+VOCALOID predstavlja primer uspešne primene informatike u muzičkoj produkciji. Kombinovanjem digitalne obrade zvuka, glasovnih podataka i korisničkog unosa omogućava stvaranje pevačkih deonica na računaru. Hatsune Miku je pokazala da ovakva tehnologija može imati uticaj ne samo na način stvaranja muzike već i na razvoj digitalne kulture i kreativnih zajednica. Zbog toga je VOCALOID zanimljiv primer saradnje tehnologije, umetnosti i korisnika.
+
+\begin{thebibliography}{9}
+\bibitem{yamahaVOCALOID}
+Yamaha Corporation, \textit{What is VOCALOID?}, dostupno na:
+\url{https://www.yamaha.com/en/news_release/2026/26022502/}.
+
+\bibitem{vocaloidHistory}
+VOCALOID Official Website, \textit{VOCALOID History}, dostupno na:
+\url{https://www.vocaloid.com/en/anniversary/history/}.
+
+\bibitem{cryptonMiku}
+Crypton Future Media, \textit{About Hatsune Miku}, dostupno na:
+\url{https://ec.crypton.co.jp/pages/prod/virtualsinger/cv01_us}.
+
+\bibitem{piapro}
+Piapro.net, \textit{Official Hatsune Miku and Piapro Characters Website}, dostupno na:
+\url{https://piapro.net/intl/en.html}.
+
+\bibitem{yamahaAI}
+Yamaha Corporation, \textit{AI Sound Synthesis Technology}, dostupno na:
+\url{https://www.yamaha.com/en/tech-design/research/technologies/aisynth/}.
+\end{thebibliography}
+
+\end{document}
